@@ -1,0 +1,11 @@
+{
+    "httpMethod": "POST",
+    "requestParameters": {
+        "integration.request.querystring.foo": "method.request.querystring.bar",
+        "integration.request.path.id": "method.request.path.id"
+    },
+    "requestTemplates": {
+        "application/json": "./integration.vm"
+    },
+    "uri": "/user/{id}"
+}

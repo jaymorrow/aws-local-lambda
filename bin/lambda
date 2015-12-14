@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var path = require('path');
+var Lambda = require('../');
+
+function responseHandler(val) {
+    if (typeof val === 'string') {
+        val = eval('(' + val + ')');
+    }
+    return typeof val === 'function' ? val : true;
+}
+
+program
+    .version(require(path.resolve(__dirname, '..', 'package.json')).version)
+    .description('Start a local Lambda server')
+    .option('-h, --handler [path]', 'Path and name of the lambda function [./index.handler]', './index.handler')
+    .option('-i, --integration [path]', 'method integration config [./integratoin.json]', './integration.json')
+    .option('-p, --port [port]', 'port for mock API Gateway [8400]', 8400);
+
+program.parse(process.argv);
+
+new Lambda({
+    handler: program.handler,
+    gateway: {
+        integration: program.integration,
+        port: program.port
+    }
+});

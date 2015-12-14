@@ -1,0 +1,14 @@
+{
+    "Authorization": "$input.params('Authorization')",
+    "Id": "$input.params('id')",
+    "Method": "$context.httpMethod",
+    "Resource": "$context.resourcePath",
+    "QueryParams": {
+        #foreach( $key in $input.params().querystring.keySet() )
+            "$key": "$input.params().querystring.get($key)"#if( $foreach.hasNext ),#end
+        #end
+    }
+    #if ($context.httpMethod != 'GET')
+    , "Body" : $input.json('$')
+    #end
+}

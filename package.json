@@ -1,0 +1,37 @@
+{
+  "name": "aws-local-lambda",
+  "version": "0.5.0",
+  "description": "Local AWS Lambda server to aid in development.",
+  "main": "index.js",
+  "bin": {
+    "lambda": "./bin/lambda"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "local",
+    "aws",
+    "lambda",
+    "server",
+    "test",
+    "testing",
+    "tuple",
+    "labs"
+  ],
+  "author": "Jay Morrow <jay.m.morrow@gmail.com> (https://github.com/jaymorrow)",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
