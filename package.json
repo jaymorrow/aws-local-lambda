@@ -7,6 +7,7 @@
     "lambda": "./bin/lambda"
   },
   "dependencies": {
+    "aws-local-apigateway": "git+https://github.com/jaymorrow/aws-local-apigateway.git",
     "commander": "^2.9.0",
     "extend": "^3.0.0"
   },
