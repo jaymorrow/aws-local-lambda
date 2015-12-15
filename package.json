@@ -1,6 +1,6 @@
 {
   "name": "aws-local-lambda",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Local AWS Lambda server to aid in development.",
   "main": "index.js",
   "bin": {
